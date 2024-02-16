@@ -67,7 +67,7 @@ Component
 // Common Text style
 .c-txt{
 	&__basic{
-		@include fts(14,28);
+		@include font-size(14);
 	}
 }
 
@@ -90,6 +90,12 @@ Component
 			&--en{
 				@include font-size(37);
 				margin-bottom: 2px;
+				@include mq(){
+					@include font-size(30);
+					line-height: 1;
+					letter-spacing: 2px;
+					margin-bottom: 0;
+				}
 			}
 			&--jp{
 				@include font-size(16);

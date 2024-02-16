@@ -86,10 +86,9 @@ $('.js-mobile').on('click', function(){
 
 
 //matchHeight
-// jQuery(function ($) {
-//     $('.news .item').matchHeight();
-// });
-
+jQuery(function ($) {
+    $('.media-list li .media-list__img').matchHeight();
+});
 
 
 //fade
