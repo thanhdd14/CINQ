@@ -1,0 +1,503 @@
+@use 'vars' as *;
+
+
+.about-mv{
+	.inner{
+		position: relative;
+		@include mq(ipd){
+			padding: 0;
+		}
+	}
+	&__img{
+		img{
+			width: 100%;
+			object-fit: cover;
+			@include mq(ipd){
+				height: 500px;
+			}
+			@include mq{
+				height: 639px;
+			}
+		}
+	}
+	&__content{
+		color: #fff;
+		font-weight: 600;
+		position: absolute;
+		bottom: 30px;
+		left: 45px;
+		width: 55.625%;
+		@include mq(ipd){
+			width: 50%;
+		}
+		@include mq{
+			width: max-content;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 56px;
+		}
+		@include mq(sm){
+			width: 100%;
+			left: 0;
+			transform: none;
+			padding: 0 15px;
+		}
+		&-ttl{
+			font-weight: 600;
+			@include font-size(40);
+			margin-bottom: 25px;
+			letter-spacing: 1px;
+			@include mq{
+				@include font-size(25);
+				margin-bottom: 20px;
+				letter-spacing: 0;
+				line-height: 1.6;
+			}
+		}
+		&-desc{
+			@include font-size(20);
+			line-height: 2;
+			letter-spacing: 2px;
+			@include mq{
+				@include font-size(16);
+				line-height: 1.5;
+				letter-spacing: 1px;
+			}
+		}
+	}
+	&__imgsub{
+		max-width: 39.375%;
+		position: absolute;
+	    right: 40px;
+    	bottom: -67px;
+		z-index: 2;
+		@include mq{
+			max-width: 440px;
+			width: 91.89%;
+			position: static;
+			margin: 0 auto 5px;
+		}
+	}
+}
+
+.about-intro{
+	background: url(../img/about/bg-01.png) no-repeat top center/116.11% auto;
+	padding-top: min(10.139vw, 146px);
+	padding-bottom: min(23.75vw, 342px);
+    margin-bottom: min(12.917vw, -186px);
+	@include mq(xl){
+		background-size: 200% auto;
+		margin-bottom: -208px;
+	}
+	@include mq{
+		padding: 85px 0;
+		padding-bottom: 273px;
+		margin-bottom: -208px;
+		background: url(../img/about/bg-01-sp.png) no-repeat bottom 30% center/233.86% auto;
+	}
+	&__list{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0 40px;
+		width: 95%;
+		margin: 0 auto;
+		@include mq(xl){
+			max-width: 800px;
+			grid-template-columns: 1fr;
+			gap: 40px 0;
+		}
+		@include mq{
+			width: 100%;
+			max-width: 600px;
+		}
+		&-item{
+			@include flex(0, 0, wrap);
+			@include mq{
+				margin-bottom: 40px;
+			}
+			@include mq(sm){
+				margin-bottom: 66px;
+				&:last-of-type{
+					margin-bottom: 0;
+				}
+			}
+		}
+		&-img{
+			width: 180px;
+			@include mq{
+				width: 35%;
+			}
+			@include mq(sm){
+				margin: 0 auto;
+				width: 52.17%;
+				max-width: 500px;
+			}
+		}
+		&-ct{
+			width: calc(100% - 180px);
+			padding-left: 28px;
+			@include mq{
+				width: 65%;
+			}
+			@include mq(sm){
+				width: 100%;
+				padding-top: 23px;
+				padding-left: 0;
+			}
+		}
+		&-ttl{
+			@include font-size(20);
+			font-weight: 600;
+			font-family: $font-en;
+			position: relative;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			@include mq{
+				padding-bottom: 23px;
+				margin-bottom: 20px;
+			}
+			@include p-after(22px, 3px){
+				background: url(../img/about/after-ttl.png) no-repeat center/100%;
+				bottom: 0;
+				left: 0;
+			}
+		}
+		&-desc{
+			margin-bottom: 15px;
+			line-height: 2;
+			@include mq{
+				line-height: 1.5;
+				margin-bottom: 20px;
+			}
+		}
+		&-logo{
+			margin-bottom: 25px;
+			@include mq{
+				margin-bottom: 28px;
+			}
+		}
+		.c-btn__01{
+			display: inline-block;
+			min-width: 300px;
+			@include mq{
+				width: 345px;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+	}
+}
+
+.about-member{
+	background:  url(../img/about/bg-02.png) no-repeat top center/100% 100%;
+	padding-bottom: min(20.833vw, 300px);
+	@include mq(ipd){
+		padding-bottom: 29vw;
+	}
+	@include mq{
+		background: url(../img/about/bg-02-sp.png) no-repeat top 207px center/100%;
+		padding-bottom: 63px;
+	}
+	&__wp{
+		@include flex(0, 0, wrap);
+		margin-bottom: min(12.153vw, 175px);
+		@include mq{
+			margin-bottom: 93px;
+		}
+	}
+	&__left{
+		width: calc(100% - 45.25%);
+		color: #fff;
+		padding-top: 17vw;
+		@include mq(ipd){
+			padding-top: 20vw;
+		}
+		@include mq{
+			width: 100%;
+			padding-top: 0;
+			padding-right: 0;
+			order: 2;
+		}
+		&-ttl{
+			font-family: $font-en;
+			@include font-size(40);
+			font-weight: 600;
+			margin-bottom: 10px;
+			@include mq{
+				@include font-size(25);
+
+			}
+		}
+		&-desc{
+			line-height: 2;
+			letter-spacing: 2px;
+		}
+		&-ttlsub{
+			@include font-size(30);
+			font-weight: 600;
+			font-family: $font-en;
+			margin-bottom: 20px;
+			@include mq{
+				@include font-size(25);
+				margin-bottom: 14px;
+			}
+		}
+		&-link{
+			color: #7FB645;
+			position: relative;
+			display: inline-flex;
+			align-items: center;
+			margin-bottom: 22px;
+			@include p-before(8px, 6px){
+				background: url(../img/about/arr-right.png) no-repeat center/100%;
+				position: relative;
+				margin-right: 5px;
+				top: -2px;
+			}
+		}
+	}
+	&__right{
+		width: 45.25%;
+		position: relative;
+		right: -29px;
+		@include mq(ipd){
+			right: 0;
+			top: 100px;
+		}
+		@include mq{
+			width: 96.52%;
+			max-width: 500px;
+			margin: 0 auto 45px;
+			right: 0;
+			order: 1;
+			position: static;
+		}
+	}
+	&__benefits{
+		margin-bottom: 82px;
+		@include mq{
+			margin-bottom: 45px;
+		}
+		&-ttl{
+			@include font-size(30);
+			font-weight: 600;
+			color: #fff;
+			margin-bottom: 38px;
+			font-family: $font-en;
+			letter-spacing: 1px;
+			@include mq{
+				@include font-size(25);
+				margin-bottom: 20px;
+				letter-spacing: 0;
+			}
+		}
+		&-wp{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 0 44px;
+			@include mq{
+				grid-template-columns: 1fr;
+				gap: 38px 0;
+			}
+		}
+		.benefits-list{
+			&__item{
+				margin-bottom: 50px;
+				color: #fff;
+				@include mq{
+					margin-bottom: 37px;
+				}
+				&:last-of-type{
+					margin-bottom: 0;
+				}
+				p{
+					line-height: 2;
+				}
+			}
+			&__ttl{
+				@include font-size(16);
+				font-weight: 600;
+				font-family: $font-en;
+				color: #fff;
+				margin-bottom: 20px;
+				padding-left: 66px;
+				position: relative;
+				letter-spacing: 2px;
+				@include mq{
+					padding-left: 0;
+					padding-top: 34px;
+					margin-bottom: 8px;
+					letter-spacing: 1px;
+				}
+				small{
+					font-weight: 400;
+					display: block;
+				}
+				&-number{
+					width: 60px;
+					height: 24px;
+					@include font-size(16);
+					font-weight: 600;
+					color: #fff;
+					background: url(../img/about/bg-number.png) no-repeat center/100%;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					position: absolute;
+					top: 40%;
+					left: 0;
+					transform: translateY(-50%);
+					padding-top: 4px;
+					padding-right: 6px;
+					letter-spacing: 0;
+					@include mq{
+						top: 0;
+						transform: none;
+					}
+				}
+			}
+		}
+	}
+	&__final{
+		text-align: center;
+		color: #fff;
+		@include mq{
+			text-align: left;
+		}
+		&-ttl{
+			@include font-size(20);
+			font-weight: 600;
+			color: #fff;
+			margin-bottom: 20px;
+			font-family: $font-en;
+			letter-spacing: 1px;
+			@include mq{
+				line-height: 2;
+				margin-bottom: 9px;
+			}
+		}
+		&-desc{
+			@include font-size(16);
+			line-height: 2;
+			font-weight: 600;
+			margin-bottom: 30px;
+			@include mq{
+				line-height: 1.8;
+			}
+		}
+		.c-btn__01{
+			max-width: 300px;
+			margin: 0 auto;
+			@include mq{
+				max-width: 345px;
+			}
+		}
+	}
+}
+
+
+.about-subscription{
+	padding-bottom: 219px;
+	@include mq{
+		padding-top: 30px;
+		padding-bottom: 50px;
+	}
+	&__wp{
+		@include flex(0, 0, wrap);
+	}
+	&__ct{
+		width: calc(100% - 47%);
+		padding-right: 100px;
+		padding-top: 80px;
+		line-height: 2;
+		@include mq(ipd){
+			padding-right: 0;
+			padding-top: 40px;
+		}
+		@include mq{
+			width: 100%;
+			padding-right: 0;
+			padding-top: 23px;
+			order: 2;
+		}
+	}
+	&__ttl{
+		@include font-size(30);
+		font-weight: 600;
+		margin-bottom: 30px;
+		@include mq{
+			@include font-size(25);
+			margin-bottom: 20px;
+		}
+	}
+	&__desc{
+		margin-bottom: 83px;
+		@include mq{
+			margin-bottom: 40px;
+		}
+	}
+	&__img{
+		width: 47%;
+		position: relative;
+		right: -31px;
+		top: -28px;
+		@include mq{
+			width: 85.21%;
+			max-width: 500px;
+			margin: 0 auto;
+			position: static;
+			order: 1;
+		}
+	}
+	&__list{
+		margin-left: 35px;
+		@include mq{
+			margin-left: 0;
+			margin-bottom: 24px;
+		}
+		&-item{
+			margin-bottom: 62px;
+			@include mq{
+				margin-bottom: 28px;
+			}
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+		}
+		&-ttl{
+			font-family: $font-en;
+			@include font-size(20);
+			font-weight: 600;
+			position: relative;
+			@include mq{
+				padding-left: 18px;
+			}
+			@include p-before(12px, 12px){
+				background: url(../img/support/before-payment.png) no-repeat center/100%;
+				top: 45%;
+				transform: translateY(-50%);
+				left: -15px;
+				@include mq{
+					left: 0;
+					top: 10px;
+					transform: none;
+				}
+			}
+		}
+	}
+	.c-btn__01{
+		max-width: 325px;
+		margin: 0 auto;
+		margin-top: 40px;
+		position: relative;
+		left: -35px;
+		@include mq(ipd){
+			left: 0;
+		}
+		@include mq{
+			left: 0;
+			margin-top: 0;
+			max-width: 345px;
+		}
+	}
+}
