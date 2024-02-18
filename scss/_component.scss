@@ -102,13 +102,55 @@ Component
 			}
 		}
 	}
+	&__02{
+		@include font-size(30);
+		line-height: 1;
+		font-family: $font-en;
+		font-weight: 600;
+		background: rgba(#7FB645, .2);
+		padding: 26px 27px 22px;
+		position: relative;
+		letter-spacing: 1px;
+		@include mq{
+			@include font-size(25);
+			padding: 30px 27px 23px;
+			letter-spacing: 0;
+		}
+		@include p-before(18px, 20px){
+			background: url(../img/support/before-ttl.png) no-repeat center/100%;
+			left: 0;
+			top: 47%;
+			transform: translateY(-50%);
+		}
+	}
 
 }
 
 //btn
 .c-btn{
 	&__01{
-
+		display: block;
+		@include font-size(16);
+		font-weight: 600;
+		color: #fff;
+		text-shadow: 1px 1px #000;
+		position: relative;
+		background: rgb(15,36,12);
+		padding: 22px 18px 14px;
+		border-radius: 5px;
+		border: 2px solid rgba($color: #0F240C, $alpha: .4);
+		background: linear-gradient(122deg, rgba(15,36,12,1) 0%, rgba(25,75,16,1) 100%);
+		border-radius: 5px;
+		overflow: hidden;
+		@include mq{
+			padding: 17px 13px;
+			letter-spacing: 1px;
+		}
+		@include p-before(11px, 12px){
+			background: url(../img/support/before-link.png) no-repeat center/100%;
+			position: static;
+			margin-right: 6px;
+		}
 	}
 }
 

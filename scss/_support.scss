@@ -1,0 +1,321 @@
+@use 'vars' as *;
+
+.mv-page{
+	margin-bottom: min(9.028vw, 130px);
+	@include mq{
+		margin-bottom: 0;
+	}
+	.inner{
+		position: relative;
+		@include mq{
+			padding: 0;
+		}
+	}
+	&__content{
+		position: absolute;
+		top: 53%;
+		transform: translateY(-50%);
+		left: 0;
+		color: #fff;
+		font-weight: 600;
+		padding: 0 70px;
+		z-index: 2;
+		@include mq{
+			padding: 0 15px;
+		}
+		&-ttl{
+			@include font-size(40);
+			line-height: 1;
+			font-weight: 700;
+			letter-spacing: 1px;
+			margin-bottom: 24px;
+			@include mq{
+				@include font-size(25);
+				margin-bottom: 10px;
+				letter-spacing: 0;
+			}
+		}  
+		&-desc{
+			@include font-size(20);
+			letter-spacing: 2px;
+			@include mq{
+				@include font-size(16);
+			}
+		}
+	}
+	&__img{
+		img{
+			width: 100%;
+			height: 250px;
+			object-fit: cover;
+			@include mq{
+				height: auto;
+			}
+		}
+	}
+}
+
+.anchor-link{
+	padding-bottom: min(9.028vw, 130px);
+	@include mq{
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	@include mq(sm){
+		padding-top: 0;
+	}
+	.inner{
+		max-width: 880px;
+		@include mq(sm){
+			padding: 0;
+		}
+	}
+	&__list{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 48px;
+		@include mq{
+			grid-template-columns: 1fr 1fr;
+			gap: 30px;
+		}
+		@include mq(sm){
+			grid-template-columns: 1fr;
+			gap: 0;
+		}
+		li{
+			@include mq{
+				border-bottom: 1px solid #fff;
+			}
+			a{
+				font-family: $font-en;
+				display: block;
+				@include font-size(16);
+				font-weight: 600;
+				color: #fff;
+				text-shadow: 1px 1px #000;
+				position: relative;
+				background: rgb(15,36,12);
+				padding: 22px 18px 14px;
+				border-radius: 5px;
+				border: 2px solid rgba($color: #0F240C, $alpha: .4);
+				background: linear-gradient(122deg, rgba(15,36,12,1) 0%, rgba(25,75,16,1) 100%);
+				@include mq{
+					border-radius: 0;
+					padding: 17px 13px;
+					letter-spacing: 1px;
+				}
+				@include p-before(11px, 12px){
+					background: url(../img/support/before-link.png) no-repeat center/100%;
+					position: static;
+					margin-right: 6px;
+					@include mq{
+						width: 7px;
+						height: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.support-main{
+	padding-bottom: min(11.806vw, 170px);
+	@include mq{
+		padding-bottom: 110px;
+	}
+}
+
+.support-box{
+	margin-bottom: min(9.722vw, 140px);
+	@include font-size(14);
+	line-height: 1.5;
+	@include mq{
+		margin-bottom: 78px;
+	}
+	&:last-of-type{
+		margin-bottom: 0;
+	}
+	.c-ttl__02{
+		@include mq{
+			width: calc(100% + 30px);
+			margin-left: -15px;
+		}
+	}
+	&__content{
+		padding-top: 30px;
+		&--02{
+			padding-top: 20px;
+			.support-payment{
+				margin-bottom: 52px;
+				@include mq{
+					margin-bottom: 37px;
+				}
+			}
+		}
+		&--03{
+			padding-top: 54px;
+			@include mq{
+				padding-top: 19px;
+			}
+			.support-payment{
+				margin-bottom: 50px;
+				@include mq{
+					margin-bottom: 33px;
+				}
+			}
+		}
+	}
+	&__note{
+		color: #777777;
+		@include font-size(14);
+		margin-top: 40px;
+	}
+}
+
+.flow-list{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0 50px;
+	margin-top: 60px;
+	padding-bottom: 45px;
+	@include mq{
+		max-width: 450px;
+		margin: 0 auto;
+		grid-template-columns: 1fr;
+		gap: 72px 0;
+		margin-top: 20px;
+		padding-bottom: 55px;
+	}
+	&__item{
+		position: relative;
+		@include p-after(12px, 34px){
+			background: url(../img/support/arrow-gr.png) no-repeat center/100%;
+			top: 24.5%;
+			right: -27px;
+			@include mq{
+				width: 34px;
+				height: 11px;
+				background: url(../img/support/arr-down.png) no-repeat center/100%;
+				top: auto;
+				right: auto;
+				bottom: -40px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		&:last-of-type{
+			&:after{
+				display: none;
+			}
+		}
+	}
+	&__img{
+		margin-bottom: 10px;
+	}
+	&__label{
+		font-family: $font-en;
+		@include font-size(16);
+		font-weight: 600;
+		margin-left: 11px;
+		display: inline-block;
+		margin-bottom: 10px;
+		@include mq{
+			margin-left: 0;
+		}
+		.number{
+			@include font-size(24);
+			line-height: 1;
+			margin-right: 8px;
+		}
+	}
+	&__txt{
+		@include font-size(14);
+		line-height: 1.5;
+	}
+}
+
+.support-payment{
+	margin-bottom: 30px;
+	padding-left: 60px;
+	@include mq(ipd){
+		padding-left: 30px;
+	}
+	@include mq{
+		padding-left: 0;
+		margin-bottom: 25px;
+	}
+	&:last-of-type{
+		margin-bottom: 0;
+	}
+	&__ttl{
+		font-family: $font-en;
+		@include font-size(20);
+		font-weight: 600;
+		position: relative;
+		margin-bottom: 15px;
+		@include mq{
+			padding-left: 18px;
+			margin-bottom: 6px;
+		}
+		@include p-before(12px, 12px){
+			background: url(../img/support/before-payment.png) no-repeat center/100%;
+			top: 38%;
+			transform: translateY(-50%);
+			left: -20px;
+			@include mq{
+				left: 0;
+				top: 7px;
+				transform: none;
+ 			}
+		}
+	}
+	&__content{
+		@include font-size(14);
+	}
+	&__note{
+		margin-top: 15px;
+	}
+	&__img{
+		max-width: 450px;
+		margin-top: 12px;
+		@include mq{
+			max-width: 305px;
+			margin-top: 20px;
+		}
+	}
+}
+
+
+.list-dots{
+	margin-top: 46px;
+    padding-left: 40px;
+	@include mq(ipd){
+		padding-left: 20px;
+	}
+	@include mq{
+		margin-top: 20px;
+		padding-left: 0;
+	}
+	li{
+		margin-bottom: 10px;
+		position: relative;
+		padding-left: 10px;
+		@include mq{
+			margin-bottom: 12px;
+		}
+		@include p-before(4px, 4px){
+			background: #7FB645;
+			border-radius: 50%;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			@include mq{
+				top: 8px;
+				transform: none;
+			}
+		}
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+}

@@ -161,43 +161,5 @@
 			</div>
 		</div>
 	</section>
-	<section class="sec-contact">
-		<div class="inner">
-			<h2 class="c-ttl__01 mbpc-30 mbsp-28">
-				<span class="c-ft--en">CONTACT US</span>
-				<span class="c-ft--jp">お問い合わせ</span>
-			</h2>
-			<div class="contact-note c-txt__basic c-al--c">
-				<p>
-					商品やショッピングに関することなど、ご質問やご不明な点がございましたら<br>
-					お電話または下記フォームより、お気軽にお問い合わせください。
-				</p>
-			</div>
-			<div class="contact-block">
-				<div class="contact-block__heading">
-					<img src="<%= RELATIVE_PATH %>img/index/contact-note.png" alt="CiNQ" class="pc">
-					<img src="<%= RELATIVE_PATH %>img/index/contact-note-sp.png" alt="CiNQ" class="sp">
-				</div>
-				<a href="tel:0448505115" class="contact-block__item contact-block__tel">
-					<span class="contact-block__tel-number c-ft--jp">
-						<span class="contact-block__icon">
-							<img src="<%= RELATIVE_PATH %>img/common/tel.png" alt="tel">
-						</span>
-						044-850-5115
-					</span>
-					<span class="contact-block__tel-note">
-						営業時間：平日 10:00～17:00<br class="sp">（土・日曜、祝日、年末年始を除く）
-					</span>
-				</a>
-				<a href="#" class="contact-block__item contact-block__mail">
-					<span class="contact-block__mail-ttl c-ft--jp">
-						<span class="contact-block__icon mbpc-17">
-							<img src="<%= RELATIVE_PATH %>img/common/mail.png" alt="mail">
-						</span>
-						お問い合わせフォーム
-					</span>
-				</a>
-			</div>
-		</div>
-	</section>
+	<%- include('common/_contact'); %>
 </main>
